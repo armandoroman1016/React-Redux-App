@@ -1,0 +1,29 @@
+.nav-bar{
+    height: 175px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #353755;
+    color: #ffffff;
+    h1{
+        font-size:3.2rem;
+        font-weight:900;
+        height: auto;
+        
+    }
+    h1:hover{
+            text-shadow: 0px 0px 2.5px #e0e4ee;
+    }
+    ul{
+        display: flex;
+        width: 40%;
+        justify-content: space-between;
+        align-items: center;
+        list-style-type: none;
+        font-size: 2rem;
+        li:hover{
+                text-shadow: 0px 0px 2.5px #e0e4ee;
+        }
+    }
+}

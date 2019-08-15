@@ -1,10 +1,11 @@
-import { FETCH_BREWERY_DATA_START , FETCH_BREWERY_DATA_SUCCESS} from '../actions'
+import { FETCH_BREWERY_DATA_START , FETCH_BREWERY_DATA_SUCCESS, FETCH_BREWERY_DATA_ERROR} from '../actions'
 
 const initialState = {
     breweries: [],
     favorites : [],
     isLoading : false,
-    error : ''
+    error : '',
+    hasBreweries: false
 }
 
 export const reducer = (state = initialState , action) => {
@@ -18,7 +19,13 @@ export const reducer = (state = initialState , action) => {
         case FETCH_BREWERY_DATA_SUCCESS:
             return{
                 ...state,
-                breweries : action.payload
+                breweries : action.payload,
+                hasBreweries : true
+            }
+        case FETCH_BREWERY_DATA_ERROR:
+            return{
+                ...state,
+                error: action.payload
             }
         default :
             return state;
