@@ -2,7 +2,8 @@
     height: 175px;
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0 100px;
     align-items: center;
     background-color: #353755;
     color: #ffffff;
@@ -10,18 +11,21 @@
         font-size:3.2rem;
         font-weight:900;
         height: auto;
-        
+        cursor: pointer;
     }
     h1:hover{
             text-shadow: 0px 0px 2.5px #e0e4ee;
     }
     ul{
         display: flex;
-        width: 40%;
+        width: 30%;
         justify-content: space-between;
         align-items: center;
         list-style-type: none;
         font-size: 2rem;
+        li{
+            cursor: pointer;
+        }
         li:hover{
                 text-shadow: 0px 0px 2.5px #e0e4ee;
         }

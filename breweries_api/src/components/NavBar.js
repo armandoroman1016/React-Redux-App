@@ -7,7 +7,6 @@ const NavBar = () => {
         <div className = 'nav-bar'>
             <h1> Open Breweries </h1>
             <ul>
-                <li>Home</li>
                 <li>Breweries</li>
                 <li>My Favorites</li>            
             </ul>        
