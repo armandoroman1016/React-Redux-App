@@ -1,0 +1,39 @@
+.landing-page{
+    height: 82vh;
+    background: linear-gradient(
+        0deg,
+        rgba(252, 194, 90,.75) 0%,
+        rgba(53,55,85,.75) 80%),
+        url('../assets/images/beer.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    h1{
+        font-size:3.2rem;
+        color: #ffffff;
+        text-shadow: 2px 2px 2px #353755;
+    }
+    h4{
+        font-size:2.4rem;
+        color: #ffffff;
+        text-shadow: 0px 0px 3px #353535;
+        letter-spacing: .25px;
+    }
+    button{
+        background: #353755;
+        color: #ffffff;
+        border: none;
+        padding: 15px;
+        width: 16%;
+        font-size: 1.4rem;
+        border-radius: 10px;
+        font-weight: 650;
+        cursor: pointer;
+    }
+    button:hover{
+        color: darken( #ffffff, 10% );
+        background-color: darken( #353755, 10% );
+    }
+}
