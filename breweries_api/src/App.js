@@ -1,4 +1,5 @@
 import React from 'react';
+import {Route, Switch} from 'react-router-dom'
 import BreweryList from './components/BreweryList'
 import 'semantic-ui-css/semantic.min.css';
 import NavBar from './components/NavBar'
@@ -9,9 +10,12 @@ function App(props) {
   return (
     <div className="App">
       <NavBar/>
-      <LandingPage />
-      <BreweryList/>
-      <Favorites/>
+      <Switch>
+        <Route exact path = '/' component = {LandingPage}/>
+        <Route path = '/breweries' component = {BreweryList}/>
+        <Route path = '/favorites' component = {Favorites}/>
+        <BreweryList />
+      </Switch>
     </div>
   );
 }

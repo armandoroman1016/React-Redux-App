@@ -2,8 +2,11 @@ import React from 'react'
 import { connect } from 'react-redux';
 import { Grid } from 'semantic-ui-react'
 import BreweryCard from './BreweryCard'
+import Favorites from './Favorites';
 
 const BreweryList = props => {
+
+    const columns = ''
 
     return (
         <div>
@@ -23,7 +26,9 @@ const BreweryList = props => {
                 </Grid>
             </div>
          ) : (
-            ''
+             <div>
+             <h1> Click To Get Your Brew On.</h1>
+             </div>
          )}
         </div>
     )
@@ -31,7 +36,7 @@ const BreweryList = props => {
 
 const mapStateToProps = state => {
     return {
-        breweries : state.breweries
+        breweries : state.breweries,
     }
 }
 

@@ -4,11 +4,10 @@ import { Grid } from 'semantic-ui-react'
 import BreweryCard from './BreweryCard'
 
 const Favorites = props => {
-    console.log(props)
     return (
         <div>
             {props.favorites.length ? (
-                <Grid columns='three' divided >
+                <Grid columns='two' divided >
                     <Grid.Row>
                 {props.favorites.map( favorite => {
                     return( 

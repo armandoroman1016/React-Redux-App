@@ -4,6 +4,7 @@ import './index.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
+import { BrowserRouter as Router } from 'react-router-dom'
 
 //redux
 import { createStore, applyMiddleware, compose } from 'redux';
@@ -17,7 +18,9 @@ const store = createStore(reducer, composeEnhancers(applyMiddleware(thunk, logge
 
 ReactDOM.render(
     <Provider store = {store}>
-        <App />
+        <Router>
+            <App />
+        </Router>
     </Provider>, 
     document.getElementById('root'));
 

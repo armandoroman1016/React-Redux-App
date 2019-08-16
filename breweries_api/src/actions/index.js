@@ -4,5 +4,7 @@ export {
     FETCH_BREWERY_DATA_SUCCESS,
     FETCH_BREWERY_DATA_ERROR,
     ADD_TO_FAVORITES,
-    addToFavorites
+    addToFavorites,
+    REMOVE_FROM_FAVORITES,
+    removeFromFavorites
 } from './beweryActions'
