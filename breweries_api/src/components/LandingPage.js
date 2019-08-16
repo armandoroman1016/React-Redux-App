@@ -6,9 +6,6 @@ import { Redirect } from 'react-router';
 
 
 const LandingPage = props => {
-
-
-    
     return (
         <div className = 'landing-page'>
         {props.fireRedirect ? <Redirect to = '/breweries'/> : false}        
@@ -29,5 +26,4 @@ const mapStateToProps = state =>{
         fireRedirect : state.fireRedirect
     }
 }
-  
 export default connect(mapStateToProps, { getData })(LandingPage)

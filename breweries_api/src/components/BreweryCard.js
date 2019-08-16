@@ -9,7 +9,7 @@ const BreweryCard = props => {
     const { buttonText } = props
 
     return (
-        <Card>
+        <Card className = 'brewery-card'>
             <Card.Content>
                 <Card.Header>{brewery.name}</Card.Header>
                 <Card.Description>

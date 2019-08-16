@@ -2,10 +2,11 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { Grid } from 'semantic-ui-react'
 import BreweryCard from './BreweryCard'
+import { Link } from 'react-router-dom'
 
 const Favorites = props => {
     return (
-        <div>
+        <div className = 'favorites no-favorites'>
             {props.favorites.length ? (
                 <Grid columns='two' divided >
                     <Grid.Row>
@@ -19,7 +20,9 @@ const Favorites = props => {
                 </Grid.Row>
                 </Grid>
                 ):(
-                    'Hello'
+                    (
+                        <h1 className = 'no-favorites-message'>It appears you don't currently have any breweries in your favorites. Checkout the <Link to = '/breweries'>breweries</Link> to get started.</h1>
+                    )
                 )}
         </div>
     )

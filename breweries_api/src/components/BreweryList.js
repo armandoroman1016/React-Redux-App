@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux';
 import { Grid } from 'semantic-ui-react'
 import BreweryCard from './BreweryCard'
-import Favorites from './Favorites';
+
 
 const BreweryList = props => {
 
@@ -12,8 +12,10 @@ const BreweryList = props => {
         <div>
         {props.breweries.length ? (
             <div className = 'brewery-container'>
-                <h2>Checkout some of our Breweries!</h2>
-                <Grid columns='three' divided >
+                <div className = 'brews-header'>
+                    <h2>Checkout some of these breweries!</h2>
+                </div>
+                <Grid columns='three' divided  className = 'brewery-cards'>
                     <Grid.Row>
                 {props.breweries.map(brewery => {
                     return( 
@@ -26,8 +28,8 @@ const BreweryList = props => {
                 </Grid>
             </div>
          ) : (
-             <div>
-             <h1> Click To Get Your Brew On.</h1>
+             <div className = 'get-brews'>
+             <h1 className = 'get-brews-header'> Click To Get Your Brew On.</h1>
              </div>
          )}
         </div>

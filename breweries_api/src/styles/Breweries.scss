@@ -1,0 +1,54 @@
+.brewery-container{
+    widows: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    .brews-header{
+        background: linear-gradient(
+        0deg,
+        rgba(252, 194, 90,.5) 0%,
+        rgba(53,55,85,.5) 80%),
+        url('../assets/images/pouring-beer.jpg') no-repeat bottom left fixed;
+    background-size: cover;
+        height: 60vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h2{
+        font-size: 3.4rem;
+        color: #e0e4ee;
+        text-shadow:0 0 3px #000000;
+        }
+    }
+    .brewery-cards{
+        width: 80%;
+        height: 100%;
+        transform: translateX(16%);
+        .row{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-around;
+        align-items: baseline;
+        margin: 60px 0;
+        .brewery{
+            height:350px;
+            .brewery-card{
+                height: 80%;
+                width: 90%;
+            }
+        }
+        }
+    }
+    
+}
+.ui.grid {
+    margin-top: 0;
+    margin-bottom: 0 ;
+    margin-left: 0;
+    margin-right: 0;
+}
