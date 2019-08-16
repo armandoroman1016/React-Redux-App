@@ -6,7 +6,7 @@ import BreweryCard from './BreweryCard'
 const BreweryList = props => {
 
     return (
-        <>
+        <div>
         {props.breweries.length ? (
             <div className = 'brewery-container'>
                 <h2>Checkout some of our Breweries!</h2>
@@ -15,7 +15,7 @@ const BreweryList = props => {
                 {props.breweries.map(brewery => {
                     return( 
                         <Grid.Column className = 'brewery' key = {brewery.id} style = {{boxShadow: 'none'}}>
-                            <BreweryCard brewery = {brewery}/>
+                            {<BreweryCard brewery = {brewery} buttonText = {'Add To Favorites'}/>}
                         </Grid.Column>
                     )
                 })}
@@ -25,7 +25,7 @@ const BreweryList = props => {
          ) : (
             ''
          )}
-        </>
+        </div>
     )
 }
 

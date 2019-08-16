@@ -1,4 +1,4 @@
-import { FETCH_BREWERY_DATA_START , FETCH_BREWERY_DATA_SUCCESS, FETCH_BREWERY_DATA_ERROR} from '../actions'
+import { FETCH_BREWERY_DATA_START , FETCH_BREWERY_DATA_SUCCESS, FETCH_BREWERY_DATA_ERROR, ADD_TO_FAVORITES} from '../actions'
 
 const initialState = {
     breweries: [],
@@ -27,6 +27,16 @@ export const reducer = (state = initialState , action) => {
                 ...state,
                 error: action.payload
             }
+        case 'ADD_TO_FAVORITES':
+                return{
+                        ...state,
+                            favorites: [...state.favorites, action.payload]
+                    }
+        case 'REMOVE_FROM_FAVORITES':
+                return{
+                    ...state,
+                    favorites: [...state.favorites, action.payload]
+                }
         default :
             return state;
     }

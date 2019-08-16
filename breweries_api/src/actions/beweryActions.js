@@ -3,12 +3,12 @@ import axios from 'axios'
 export const FETCH_BREWERY_DATA_START = 'FETCH_BREWERY_DATA_START'
 export const FETCH_BREWERY_DATA_SUCCESS = 'FETCH_BREWERY_DATA_SUCCESS'
 export const FETCH_BREWERY_DATA_ERROR = 'FETCH_BREWERY_DATA_ERROR'
+export const ADD_TO_FAVORITES = 'ADD_TO_FAVORITES'
 
 
 export const getData = () => {
-
     return dispatch => {
-        dispatch({ type : 'FETCH_BREWERY_DATA_START'})
+        dispatch({ type : FETCH_BREWERY_DATA_START})
         axios   
             .get('https://api.openbrewerydb.org/breweries')
             .then( res => {
@@ -18,5 +18,10 @@ export const getData = () => {
                 dispatch({ type : FETCH_BREWERY_DATA_ERROR, payload : err.response})
             })
     }
+}
 
+export const addToFavorites = ( payload ) => {
+    return dispatch => {
+        dispatch({ type : ADD_TO_FAVORITES, payload : payload})
+    }
 }
