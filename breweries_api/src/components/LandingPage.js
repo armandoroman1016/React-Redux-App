@@ -19,6 +19,7 @@ const LandingPage = props => {
         </div>
     )
 }
+
 const mapStateToProps = state =>{
     return {
         breweries : state.breweries,
