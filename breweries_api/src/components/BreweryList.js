@@ -5,9 +5,6 @@ import BreweryCard from './BreweryCard'
 
 
 const BreweryList = props => {
-
-    const columns = ''
-
     return (
         <div>
         {props.breweries.length ? (
