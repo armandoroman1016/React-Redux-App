@@ -19,6 +19,7 @@ const store = createStore(reducer, composeEnhancers(applyMiddleware(thunk, logge
 ReactDOM.render(
     <Provider store = {store}>
         <Router>
+            <h1>testing</h1>
             <App />
         </Router>
     </Provider>, 
