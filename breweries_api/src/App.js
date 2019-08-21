@@ -6,7 +6,7 @@ import NavBar from './components/NavBar'
 import LandingPage from './components/LandingPage'
 import Favorites from'./components/Favorites';
 
-function App(props) {
+function App() {
   return (
     <div className="App">
       <NavBar/>
@@ -17,6 +17,7 @@ function App(props) {
         <BreweryList />
       </Switch>
     </div>
+    
   );
 }
 
