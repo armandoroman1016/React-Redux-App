@@ -24,7 +24,6 @@ const mapStateToProps = state =>{
     return {
         breweries : state.breweries,
         fireRedirect : state.fireRedirect
-        
     }
 }
 export default connect(mapStateToProps, { getData })(LandingPage)
