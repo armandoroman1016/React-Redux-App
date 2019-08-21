@@ -24,7 +24,8 @@ const NavBar = () => {
                             activeStyle = {{color: '#e0e4ee', fontSize: '2.1rem', textDecorationLine: 'underline', fontWeight: '700'}}
                     >My Favorites</NavLink>
                 </li>            
-            </ul>        
+            </ul>
+            <p>Hi this is from Chris!</p>    
         </div>
     )
 }
