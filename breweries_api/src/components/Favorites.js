@@ -8,7 +8,7 @@ const Favorites = props => {
     return (
         <div className = 'favorites no-favorites'>
             {props.favorites.length ? (
-                <Grid columns='two' divided >
+                <Grid columns='two' divided  className= 'favorites-cards'>
                     <Grid.Row>
                 {props.favorites.map( favorite => {
                     return( 
